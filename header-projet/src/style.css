@@ -45,7 +45,7 @@ body    {
 .hero {
     grid-area: hero;
     height: 85vh;
-    background: url(../images/lemons.jpg) center center no-repeat;
+    background: url(../src/images/lemons.jpg) center center no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -60,7 +60,7 @@ body    {
 }
 
 .hero::after{
-    content: url('../images/seta_preta.png');
+    content: url('../src/images/seta_preta.png');
     position: absolute;
     height: 35px;
     bottom: 40px;
@@ -128,12 +128,12 @@ body    {
 }
 
 .about .image.right{
-    background: url(../images/bridge.jpg) center no-repeat;
+    background: url(../src/images/bridge.jpg) center no-repeat;
     background-size: cover;
 }
 
 .about .image.left{
-    background: url(../images/sky.jpg) center no-repeat;
+    background: url(../src/images/sky.jpg) center no-repeat;
     background-size: cover;
 }
 
@@ -152,14 +152,77 @@ body    {
 
 .services {
     grid-area: services;
-    background-color: aqua;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}
+
+.services .service {
+    padding: 70px 20px;
+}
+
+.services .service img{
+    width: 250px;
+    margin-bottom: 30px;
+}
+
+.services .service h3{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.services .service p{
+    font-size: 2rem;
+    font-weight: 400;
+    max-width: 400px;
+    margin: 20px auto 0;
+    line-height: 25px;
+}
+
+.services .service:nth-child(1) {
+    background-color: lightskyblue;
+}
+
+.services .service:nth-child(2) {
+    background-color: lightpink;
+}
+
+@media (max-width: 425px){
+    .services {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* PROJECTS */
 
 .projects {
     grid-area: projects;
-    background-color: darkmagenta;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.projects img{
+    width: 100%;
+    height: 100%;
+}
+
+.projects a:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .projects {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media (max-width: 425px){
+    .projects{
+        grid-template-columns: 1fr;
+        grid-template-rows: 4fr;
+    }
 }
 
 /* FOOTER */

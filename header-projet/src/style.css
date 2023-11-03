@@ -1,0 +1,57 @@
+html    {
+    font-size: 62.5%;
+}
+
+body    {
+    font-family: 'Epilogue', sans-serif;
+    display: grid;
+    grid-template-areas: "header header header header"
+                         "hero hero hero hero"
+                         "about about about about"
+                         "services services services services"
+                         "projects projects projects projects"
+                         "footer footer footer footer";
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* HEADER */
+
+.header {
+    grid-area: header;
+    background-color: coral;
+}
+
+/* HERO */
+
+.hero {
+    grid-area: hero;
+    background-color: cornflowerblue;
+}
+
+/* ABOUT */
+
+.about {
+    grid-area: about;
+    background-color: red;
+}
+
+/* SERVICES */
+
+.services {
+    grid-area: services;
+    background-color: aqua;
+}
+
+/* PROJECTS */
+
+.projects {
+    grid-area: projects;
+    background-color: darkmagenta;
+}
+
+/* FOOTER */
+
+.footer {
+    grid-area: footer;
+    background-color: darkgreen;
+}

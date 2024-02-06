@@ -14,3 +14,7 @@
 ![primeira landing page](/src/images/print-page.png)
 
 ![resultadoEmGif](/src/images/result-better.gif)
+
+# Resultado mobile
+
+![resultadoMobile](/src/images/result-mobile.gif)
